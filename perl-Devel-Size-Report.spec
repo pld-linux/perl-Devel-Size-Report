@@ -11,7 +11,7 @@ Name:		perl-Devel-Size-Report
 Version:	0.05
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	965632af6997e6bba60e0fcd27f9bf6a
