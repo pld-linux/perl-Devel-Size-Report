@@ -3,8 +3,8 @@
 %bcond_without	tests	# do perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Devel
-%define	pnam	Size-Report
+%define		pdir	Devel
+%define		pnam	Size-Report
 Summary:	Devel::Size::Report - generate a size report for all elements in a structure
 Summary(pl):	Devel::Size::Report - generowanie raportów o rozmiarach elementów w strukturze
 Name:		perl-Devel-Size-Report
