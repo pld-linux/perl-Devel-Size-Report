@@ -8,13 +8,13 @@
 Summary:	Devel::Size::Report - generate a size report for all elements in a structure
 Summary(pl):	Devel::Size::Report - generowanie raportów o rozmiarach elementów w strukturze
 Name:		perl-Devel-Size-Report
-Version:	0.05
-Release:	2
+Version:	0.07
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	965632af6997e6bba60e0fcd27f9bf6a
+# Source0-md5:	9ac6783d9b23abba849e4b6091d409b1
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
