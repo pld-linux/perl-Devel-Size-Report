@@ -16,8 +16,9 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	965632af6997e6bba60e0fcd27f9bf6a
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl(Devel::Size)
-Requires:	perl(Devel::Size)
+%if %{with tests}
+BuildRequires:	perl-Devel-Size
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +37,8 @@ enhances Devel::Size by giving you the ability to generate a full size report fo
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT
+make install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,5 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{perl_vendorlib}/Devel/Size/Report.pm
-#%attr(755,root,root) %{perl_vendorarch}/auto/Devel/Size/Size.so
 %{_mandir}/man3/*
