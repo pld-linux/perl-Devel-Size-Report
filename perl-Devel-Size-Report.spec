@@ -6,7 +6,7 @@
 %define		pdir	Devel
 %define		pnam	Size-Report
 Summary:	Devel::Size::Report - generate a size report for all elements in a structure
-Summary(pl):	Devel::Size::Report - generowanie raportÛw o rozmiarach elementÛw w strukturze
+Summary(pl.UTF-8):   Devel::Size::Report - generowanie raport√≥w o rozmiarach element√≥w w strukturze
 Name:		perl-Devel-Size-Report
 Version:	0.10
 Release:	1
@@ -31,11 +31,11 @@ size of a structure (array, hash etc). This module enhances
 Devel::Size by giving you the ability to generate a full size report
 for each element in a structure.
 
-%description -l pl
-Devel::Size moøe raportowaÊ tylko rozmiar pojedynczego elementu lub
-ca≥kowity rozmiar struktury (tablicy, hasza itp.). Ten modu≥ rozszerza
-Devel::Size daj±c moøliwo∂Ê generowania pe≥nych raportÛw o rozmiarze
-kaødego elementu w strukturze.
+%description -l pl.UTF-8
+Devel::Size mo≈ºe raportowaƒá tylko rozmiar pojedynczego elementu lub
+ca≈Çkowity rozmiar struktury (tablicy, hasza itp.). Ten modu≈Ç rozszerza
+Devel::Size dajƒÖc mo≈ºliwo≈õƒá generowania pe≈Çnych raport√≥w o rozmiarze
+ka≈ºdego elementu w strukturze.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
