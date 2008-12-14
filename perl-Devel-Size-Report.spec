@@ -8,13 +8,13 @@
 Summary:	Devel::Size::Report - generate a size report for all elements in a structure
 Summary(pl.UTF-8):	Devel::Size::Report - generowanie raportów o rozmiarach elementów w strukturze
 Name:		perl-Devel-Size-Report
-Version:	0.10
-Release:	2
+Version:	0.13
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	72c7d4fd5ec9803772c2033e3fc8c98f
+# Source0-md5:	8a0edcc5ae979405bb48e604d0023377
 URL:		http://search.cpan.org/dist/Devel-Size-Report/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -49,16 +49,20 @@ każdego elementu w strukturze.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+cp example/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS CHANGES NEW README TODO
+%doc BUGS CHANGES README TODO
 %dir %{perl_vendorlib}/Devel/Size
 %{perl_vendorlib}/Devel/Size/Report.pm
+%{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
